@@ -22,7 +22,7 @@ export class AppComponent {
       id: this.generateId()
     }
   ];
-  constructor(private serverService: ServerService) {}
+  constructor(private serverService: ServerService) { }
   onAddServer(name: string) {
     this.servers.push({
       name: name,

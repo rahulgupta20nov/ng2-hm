@@ -5,18 +5,15 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class ServerService {
-  constructor(private http: Http) {}
+  constructor(private http: Http) { }
   storeServers(servers: any[]) {
-    const headers = new Headers({'Content-Type': 'application/json'});
-    // return this.http.post('https://udemy-ng-http.firebaseio.com/data.json',
-    //   servers,
-    //   {headers: headers});
-    return this.http.put('https://ng-http.firebaseio.com/data.json',
+    const headers = new Headers({ 'Content-Type': 'application/json' });
+    return this.http.put('https://ng-http-ff936.firebaseio.com/data.json',
       servers,
-      {headers: headers});
+      { headers: headers });
   }
   getServers() {
-    return this.http.get('https://ng-http.firebaseio.com/data')
+    return this.http.get('https://ng-http-ff936.firebaseio.com/data')
       .map(
         (response: Response) => {
           const data = response.json();
@@ -33,7 +30,7 @@ export class ServerService {
       );
   }
   getAppName() {
-    return this.http.get('https://ng-http.firebaseio.com/appName.json')
+    return this.http.get('https://ng-http-ff936.firebaseio.com/data.json')
       .map(
         (response: Response) => {
           return response.json();
