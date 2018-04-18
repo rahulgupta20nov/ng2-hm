@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>Ng4CompleteGuide</title>
@@ -8,7 +9,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
   <app-root>Loading...</app-root>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyChN24xaeilgFEK2KLSCumi9ioUbfa7DoI",
+      authDomain: "some-api-data.firebaseapp.com",
+      databaseURL: "https://some-api-data.firebaseio.com",
+      projectId: "some-api-data",
+      storageBucket: "",
+      messagingSenderId: "1080866053287"
+    };
+    firebase.initializeApp(config);
+
+  </script>
 </body>
+
 </html>
